@@ -1,4 +1,5 @@
 #include "Gate.h"
+#include "Wire.h"
 
 int Gate::AND() const
 {
