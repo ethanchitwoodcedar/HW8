@@ -29,7 +29,7 @@ public:
     int getDelay() const {return gateDelay;}
     Wire* getInput(int inputNum) const {return (inputNum == 0) ? input1 : input2;}
     Wire* getOutput() const {return output;}
-    virtual int evaluate() const; // 1 is true. 0 is false. -1 is undefined.
+    int evaluate() const; // 1 is true. 0 is false. -1 is undefined.
 };
 
 #endif GATE_H
