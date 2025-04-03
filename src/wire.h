@@ -4,9 +4,11 @@
 class Wire
 {
 private:
+    int value;
     /* data */
 public:
     Wire(/* args */);
+    int getValue() {return value;}
     ~Wire();
 };
 
