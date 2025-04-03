@@ -3,5 +3,5 @@
 using namespace std;
 
 int main(int argc, char* argv[]) {
-    cout << "trent sucks";
+    //TODO: Implement main
 }
