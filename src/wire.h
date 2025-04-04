@@ -4,6 +4,8 @@
 #include <string>
 #include <iostream>
 
+class Gate;
+
 class Wire
 {
 private:
