@@ -24,17 +24,20 @@ private:
     /*history includes past values, not including the current value.*/
 
 public:
+    //Constructor
     Wire(int v, std::string n, int i);
-    int getValue(); //{return value;}
-    std::string getName();
-    int getIndex();
+    //Getters
+    int getValue() const;
+    std::string getName() const;
+    int getIndex() const;
+    std::vector<int> getHistory() const;
+    std::vector<Gate*> getDrives() const;
+    void printHistory() const;
+    //Setters
     void setValue(int v);
     void setName(std::string n);
     void setIndex(int i);
-    void printHistory();
     void addDrive(Gate*);
-    std::vector<Gate*> getDrives();
-    ~Wire();
 };
 
 #endif WIRE_H
