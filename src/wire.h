@@ -21,7 +21,7 @@ private:
     std::vector<Gate*> drives;
     int index;
     std::vector<int> history;
-    /*history includes past values, not include the current value.*/
+    /*history includes past values, not including the current value.*/
 public:
     Wire(int v, std::string n, int i);
     int getValue(); //{return value;}
