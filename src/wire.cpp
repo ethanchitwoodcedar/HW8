@@ -39,6 +39,14 @@ void Wire::printHistory() {
     }
 }
 
+void Wire::addDrive(Gate* gate) {
+    drives.push_back(gate);
+}
+
+std::vector<Gate*> getDrives() {
+    return drives;
+}
+
 Wire::~Wire()
 {
     delete this;
