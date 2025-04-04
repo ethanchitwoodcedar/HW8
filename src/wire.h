@@ -10,12 +10,18 @@ class Wire
 {
 private:
     int value;
+    /*
+        wire states are as follows:
+        0 - 0 or off
+        1 - 1 or on
+       -1 - X or unknown/undefined
+    */
+
     std::string name;
-    //string name;
     std::vector<Gate*> drives;
     int index;
     std::vector<int> history;
-    /* data */
+    /*history includes past values, not include the current value.*/
 public:
     Wire(int v, std::string n, int i);
     int getValue(); //{return value;}
