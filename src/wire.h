@@ -1,25 +1,26 @@
 #ifndef WIRE_H
 #define WIRE_H
 #include <vector>
+#include <string>
 #include <iostream>
 
 class Wire
 {
 private:
     int value;
-    char name;
+    std::string name;
     //string name;
     std::vector<Gate*> drives;
     int index;
     std::vector<int> history;
     /* data */
 public:
-    Wire(int v, char n, int i);
+    Wire(int v, std::string n, int i);
     int getValue(); //{return value;}
-    char getName();
+    std::string getName();
     int getIndex();
     void setValue(int v);
-    void setName(char n);
+    void setName(std::string n);
     void setIndex(int i);
     void printHistory();
     ~Wire();

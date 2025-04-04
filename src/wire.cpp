@@ -1,6 +1,6 @@
 #include "Wire.h"
 
-Wire::Wire(int v = 0, char n = '-', int i = 0)
+Wire::Wire(int v = 0, std::string n = "new", int i = 0)
 {
     value = v;
     name = n;
@@ -12,7 +12,7 @@ int Wire::getValue() {
     return value;
 }
 
-char Wire::getName() {
+std::string Wire::getName() {
     return name;
 }
 
@@ -24,7 +24,7 @@ void Wire::setValue(int v) {
     value = v;
 }
 
-void Wire::setName(char n) {
+void Wire::setName(std::string n) {
     name = n;
 }
 
