@@ -1,4 +1,5 @@
 #include "Wire.h"
+#include "Gate.h"
 
 Wire::Wire(int v = -1, std::string n = "new", int i = 0) {
     value = v;
