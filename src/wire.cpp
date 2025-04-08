@@ -2,21 +2,35 @@
 #include "Gate.h"
 
 Wire::Wire(int v = -1, std::string n = "new", int i = 0) {
-    value = v;
     name = n;
     index = i;
 }
 
-int Wire::getValue() {
+int Wire::getValue() const {
     return value;
 }
 
-std::string Wire::getName() {
+std::string Wire::getName() const {
     return name;
 }
 
-int Wire::getIndex() {
+int Wire::getIndex() const {
     return index;
+}
+
+std::vector<int> Wire::getHistory() const{
+    return history;
+}
+
+std::vector<Gate*> Wire::getDrives() const {
+    return drives;
+}
+
+void Wire::printHistory() const {
+    /* Currently implemented for a console application. */
+    for (int i = 0; i < history.size(); i++) {
+        std::cout << history.at(i);
+    }
 }
 
 void Wire::setValue(int v) {
@@ -33,22 +47,6 @@ void Wire::setIndex(int i) {
     index = i;
 }
 
-void Wire::printHistory() {
-    /* Currently implemented for a console application. */
-    for (int i = 0; i < history.size(); i++) {
-        std::cout << history.at(i);
-    }
-}
-
 void Wire::addDrive(Gate* gate) {
     drives.push_back(gate);
-}
-
-std::vector<Gate*> getDrives() {
-    return drives;
-}
-
-Wire::~Wire()
-{
-    delete this;
 }
