@@ -52,8 +52,15 @@ int main(int argc, char* argv[])
         }
     }
 
+    vectorIn >> input;
+    vectorIn >> input;
+
+
     while(!vectorIn.eof()) {
         //TODO: parse vector file.
+        vectorIn >> input;
+        vectorIn >> input;
+        
     }
 
     
