@@ -12,6 +12,10 @@ int main(int argc, char* argv[])
     string filename;
     string input;
     string circuitName;
+    int A;
+    int B;
+    int C;
+    int D;
     
     do {
         cout << "Please enter the name of the file (base name only) : ";
@@ -27,13 +31,18 @@ int main(int argc, char* argv[])
         //TODO: parse cricuit file.
         circuitIn >> input;
         if("INPUT" == input) {
-            
-        }
-        else if("OUTPUT" == input) {
+            circuitIn >> input;
+            circuitIn >> A;
 
         }
+        else if("OUTPUT" == input) {
+            circuitIn >> input;
+            circuitIn >> A;
+        }
         else if("AND" == input) {
-        
+            circuitIn >> input;
+            circuitIn >> A;
+
         }
         else if ("OR" == input) {
 
@@ -48,6 +57,9 @@ int main(int argc, char* argv[])
 
         }
         else if ("XNOR" == input) {
+
+        }
+        else if ("NOT" == input) {
 
         }
     }
