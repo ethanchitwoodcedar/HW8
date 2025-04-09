@@ -1,5 +1,6 @@
 #include <iostream>
 #include <fstream>
+#include <map>
 #include "Wire.h"
 #include "Gate.h"
 
@@ -12,6 +13,7 @@ int main(int argc, char* argv[])
     string filename;
     string input;
     string circuitName;
+    map<int, Wire*> wires;
     int A;
     int B;
     int C;
@@ -42,7 +44,11 @@ int main(int argc, char* argv[])
         else if("AND" == input) {
             circuitIn >> input;
             circuitIn >> A;
-
+            circuitIn >> B;
+            circuitIn >> C;
+            circuitIn >> D;
+            new Gate (0, A, wires.at(B), wires.at(C), wires.at(D));
+            
         }
         else if ("OR" == input) {
 
