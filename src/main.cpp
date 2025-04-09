@@ -5,8 +5,17 @@
 
 using namespace std;
 
+struct WireEvent{
+    string wireName;
+    short time;
+    int value;
+
+};
+
 int main(int argc, char* argv[])
 {
+    map<WireEvent> Events;
+    WireEvent Event;
     ifstream circuitIn;
     ifstream vectorIn;
     string filename;
@@ -71,8 +80,8 @@ int main(int argc, char* argv[])
     while(!vectorIn.eof()) {
         //TODO: parse vector file.
         vectorIn >> input;
-        vectorIn >> input;
-        
+        vectorIn >> Event.wireName;
+
     }
 
     
